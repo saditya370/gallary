@@ -1,0 +1,33 @@
+<div class= "SingleImage" id="<%= dom_id pic %>">
+ <!--
+  <p>
+    <strong>Name:</strong>
+    <%= pic.name %>
+  </p>
+  -->
+  
+    
+      <p>
+      <%if pic.images.attached?%>
+        
+      <%pic.images.each do |image|%>
+      
+      
+     
+      
+      <p>
+      <%# <%= link_to(image_tag(image), pic) %> %>
+      <%= image_tag image,width: "200px" %>
+      </p>
+      
+      <%end%>
+      <%end%>
+
+  
+
+</div>
+<style>
+.SingleImage{
+  display:flex;
+}
+</style>
